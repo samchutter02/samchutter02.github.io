@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Sam Chutter - Front-End Web Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Sam Chutter, a front-end web developer, showcases visually engaging, functional websites. Explore projects, tech stack, and testimonials."
+    />
+    <meta
+      name="keywords"
+      content="Sam Chutter, front-end developer, web developer, portfolio, web design, JavaScript, React, HTML, CSS, Texas State University"
+    />
+    <meta name="author" content="Sam Chutter" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.samchutter.dev/" />
+    <meta property="og:title" content="Sam Chutter - Front-End Web Developer" />
+    <meta
+      property="og:description"
+      content="Explore Sam Chutter's portfolio of front-end development projects, featuring modern tech like React and Tailwind CSS."
+    />
+    <meta
+      property="og:image"
+      content="https://www.samchutter.dev/img/social-preview.jpg"
+    />
+    <meta property="og:url" content="https://www.samchutter.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sam Chutter Portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Sam Chutter - Front-End Web Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Sam Chutter, specializing in creative and functional web development."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.samchutter.dev/img/social-preview.jpg"
+    />
+    <meta name="twitter:creator" content="@samchutter" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sam Chutter",
+        "jobTitle": "Front-End Web Developer",
+        "url": "https://www.samchutter.dev/",
+        "sameAs": [
+          "https://www.linkedin.com/in/samuel-chutter/",
+          "https://github.com/samchutter02"
+        ],
+        "description": "Senior at Texas State University specializing in front-end web development with skills in HTML, CSS, JavaScript, and React."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Samuel Chutter",
+        "url": "https://www.samchutter.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/samuel-chutter",
+          "https://www.facebook.com/sam.chutter.7",
+          "https://music.apple.com/us/artist/call-my-bluff/1786714909"
+        ],
+        "jobTitle": "Web Developer",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Texas State University"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Texas State University"
+        }
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* CSS Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Base Styles */
+      body {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        line-height: 1.6;
+        font-family: "IBM Plex Mono", monospace;
+        overflow-x: hidden;
+      }
+
+      /* Terminal Window */
+      .terminal-window {
+        background: #252526;
+        border: 1px solid #3c3c3c;
+        box-shadow: 0 4px 16px rgba(0, 255, 0, 0.1);
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      /* Terminal Header */
+      .terminal-header {
+        background: #3c3c3c;
+        padding: 8px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      .terminal-buttons span {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 8px;
+      }
+
+      /* Navigation Links */
+      .nav-links {
+        padding: 12px 16px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        color: #d4d4d4;
+        font-size: 14px;
+        position: relative;
+      }
+
+      .nav-links:hover {
+        color: #00ff00;
+        text-shadow: 0 0 5px #00ff00;
+        background: rgba(0, 255, 0, 0.1);
+      }
+
+      .nav-links::before {
+        content: "> ";
+        color: #00ff00;
+        opacity: 0.7;
+      }
+
+      /* Section Titles */
+      .section-title {
+        position: relative;
+        display: inline-block;
+        color: #00ff00;
+        text-shadow: 0 0 5px #00ff00;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .section-title::after {
+        content: "_";
+        animation: blink 1s infinite;
+        color: #00ff00;
+      }
+
+      /* Project Cards */
+      .project-card {
+        border: 1px solid #3c3c3c;
+        transition: all 0.3s ease;
+        animation: fadeIn 0.5s ease-in;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #252526;
+      }
+
+      .project-card:hover {
+        border-color: #00ff00;
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+        transform: translateY(-5px);
+      }
+
+      .project-card h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+
+      .project-card .description {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+
+      .tech-tag {
+        background: #252526;
+        border: 1px dashed #00ff00;
+        font-size: 11px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        color: #00ff00;
+        margin: 2px;
+      }
+
+      .project-links a {
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        transition: background 0.3s ease;
+      }
+
+      .project-links a:hover {
+        background: rgba(0, 255, 0, 0.1);
+      }
+
+      /* Contact Cards */
+      .contact-card {
+        border: 1px solid #3c3c3c;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        background: #252526;
+        text-align: center;
+        padding: 16px;
+      }
+
+      .contact-card:hover {
+        border-color: #00ff00;
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+        transform: scale(1.05); /* Slight scale effect on hover */
+      }
+
+      /* Contact Section Styling */
+      #contact-section {
+        background: #2a2a2a; /* Subtle background to make it stand out */
+        padding: 80px 16px; /* Increased vertical padding */
+      }
+
+      #contact-section .section-title {
+        font-size: 28px; /* Larger title */
+        text-shadow: 0 0 8px #00ff00; /* Enhanced glow effect */
+      }
+
+      #contact-section .intro-text {
+        color: #d4d4d4;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      /* Navbar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 8px 16px;
+      }
+
+      .nav-links-container {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #252526;
+        padding: 16px;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 16px rgba(0, 255, 0, 0.1);
+      }
+
+      .nav-links-container.active {
+        display: flex;
+      }
+
+      .navbar-toggle {
+        padding: 12px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .navbar-toggle span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #00ff00;
+        transition: all 0.3s ease;
+      }
+
+      .navbar-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .navbar-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .navbar-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
+
+      /* Animations */
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Focus Styles */
+      :focus {
+        outline: 2px solid #00ff00;
+        outline-offset: 2px;
+      }
+
+      /* Screenshot Images */
+      .screenshot-img {
+        transition: all 0.3s ease;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        width: 100%;
+        height: 180px;
+      }
+
+      .screenshot-img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 12px rgba(0, 255, 0, 0.2);
+      }
+
+      /* Filter Buttons */
+      .filter-btn {
+        cursor: pointer;
+        background: #252526;
+        border: 1px dashed #00ff00;
+        font-size: 14px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        color: #00ff00;
+      }
+
+      .filter-btn:hover {
+        background: rgba(0, 255, 0, 0.1);
+      }
+
+      .filter-btn.active {
+        background: #00ff00;
+        color: #1e1e1e;
+      }
+
+      .filter-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+
+      /* Hide Scrollbar */
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Tooltip for Tech Stack */
+      .tech-logo {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 64px;
+        height: 64px;
+      }
+
+      .tech-logo img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+      }
+
+      .tech-logo:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #252526;
+        color: #d4d4d4;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        z-index: 10;
+        margin-bottom: 8px;
+      }
+
+      /* Custom Colors */
+      .text-primary {
+        color: #d4d4d4;
+      }
+      .text-secondary {
+        color: #858585;
+      }
+      .text-green-accent {
+        color: #00ff00;
+      }
+      .text-green-dark {
+        color: #00cc00;
+      }
+      .bg-terminal-bg {
+        background: #1e1e1e;
+      }
+      .bg-terminal-dark {
+        background: #252526;
+      }
+
+      /* Layout Utilities */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+
+      .container-narrow {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+
+      .section {
+        padding: 60px 16px;
+      }
+
+      .grid-1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .grid-4 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .flex-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-start;
+      }
+
+      .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .w-full {
+        width: 100%;
+      }
+      .w-11-12 {
+        width: 91.666667%;
+      }
+      .min-h-screen {
+        min-height: 100vh;
+      }
+
+      /* Spacing */
+      .pt-20 {
+        padding-top: 60px;
+      }
+      .mt-8 {
+        margin-top: 8px;
+      }
+      .mt-16 {
+        margin-top: 16px;
+      }
+      .mt-32 {
+        margin-top: 32px;
+      }
+      .mb-8 {
+        margin-bottom: 8px;
+      }
+      .mb-12 {
+        margin-bottom: 12px;
+      }
+      .mb-16 {
+        margin-bottom: 16px;
+      }
+      .mb-24 {
+        margin-bottom: 24px;
+      }
+      .mb-32 {
+        margin-bottom: 32px;
+      }
+      .mb-48 {
+        margin-bottom: 48px;
+      }
+      .mx-8 {
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+
+      /* Typography */
+      .text-sm {
+        font-size: 14px;
+      }
+      .text-xs {
+        font-size: 12px;
+      }
+      .text-lg {
+        font-size: 18px;
+      }
+      .text-2xl {
+        font-size: 28px;
+      }
+      .text-3xl {
+        font-size: 36px;
+      }
+      .font-bold {
+        font-weight: 700;
+      }
+      .uppercase {
+        text-transform: uppercase;
+      }
+
+      a {
+        color: #00ff00;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #26dc26;
+      }
+
+      a:visited {
+        color: #229222;
+      }
+
+      /* Collapsible Details Styling */
+      details {
+        margin-top: 12px;
+        margin-bottom: 16px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        background: #2a2a2a;
+        border: 1px dashed #00ff00;
+        border-radius: 4px;
+        padding: 8px;
+      }
+
+      summary {
+        cursor: pointer;
+        color: #00ff00;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 8px;
+        transition: all 0.3s ease;
+      }
+
+      summary:hover {
+        background: rgba(0, 255, 0, 0.1);
+        text-shadow: 0 0 5px #00ff00;
+      }
+
+      details[open] summary {
+        border-bottom: 1px dashed #00ff00;
+      }
+
+      details p {
+        color: #d4d4d4;
+        font-size: 12px;
+        padding: 8px;
+        line-height: 1.5;
+      }
+
+      /* Responsive Styles for iPad (Tablet) */
+      @media (min-width: 768px) {
+        .nav-links-container {
+          display: flex;
+          flex-direction: row;
+          position: static;
+          background: none;
+          box-shadow: none;
+          gap: 20px;
+        }
+        .nav-links-container.active {
+          flex-direction: row;
+        }
+        .navbar-toggle {
+          display: none;
+        }
+        .nav-links {
+          padding: 12px 16px;
+          font-size: 16px;
+          width: auto;
+          text-align: left;
+        }
+        .section-title {
+          font-size: 32px;
+        }
+        .screenshot-img {
+          height: 200px;
+        }
+        .grid-2 {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        .grid-3 {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        .grid-4 {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        .section {
+          padding: 80px 24px;
+        }
+        .container {
+          padding: 24px;
+        }
+        .container-narrow {
+          padding: 24px;
+          max-width: 900px;
+        }
+        #contact-section {
+          padding: 100px 24px;
+        }
+        #contact-section .section-title {
+          font-size: 34px;
+        }
+        .pt-20 {
+          padding-top: 80px;
+        }
+        .text-2xl {
+          font-size: 30px;
+        }
+        .text-3xl {
+          font-size: 38px;
+        }
+        .tech-logo {
+          width: 72px;
+          height: 72px;
+        }
+        .tech-logo img {
+          width: 56px;
+          height: 56px;
+        }
+        .filter-btn {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+        .tech-tag {
+          font-size: 12px;
+          padding: 6px 10px;
+        }
+        .contact-card {
+          padding: 20px;
+        }
+        .project-card h3 {
+          font-size: 22px;
+          margin-bottom: 14px;
+        }
+        .project-card .description {
+          font-size: 15px;
+        }
+        details {
+          padding: 10px;
+          margin-bottom: 20px;
+          max-width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        summary {
+          font-size: 14px;
+          padding: 10px;
+        }
+        details p {
+          font-size: 13px;
+          padding: 10px;
+        }
+        .project-links a {
+          font-size: 13px;
+          padding: 5px 10px;
+        }
+      }
+
+      /* Responsive Styles for Mac (Desktop) */
+      @media (min-width: 1024px) {
+        .nav-links-container {
+          gap: 24px;
+        }
+        .nav-links {
+          font-size: 16px;
+          padding: 14px 20px;
+        }
+        .section-title {
+          font-size: 36px;
+        }
+        .screenshot-img {
+          height: 220px;
+        }
+        .grid-2 {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 32px; /* Increased gap for more breathing room */
+        }
+        .grid-3 {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+        .grid-4 {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 24px;
+        }
+        .section {
+          padding: 100px 32px;
+        }
+        .container {
+          padding: 48px; /* Increased padding for more space */
+          max-width: 1100px; /* Slightly reduced to add whitespace on sides */
+        }
+        .container-narrow {
+          padding: 32px;
+          max-width: 1000px;
+        }
+        #contact-section {
+          padding: 120px 32px;
+        }
+        #contact-section .section-title {
+          font-size: 40px;
+        }
+        .pt-20 {
+          padding-top: 100px;
+        }
+        .text-2xl {
+          font-size: 32px;
+        }
+        .text-3xl {
+          font-size: 40px;
+        }
+        .text-sm {
+          font-size: 16px;
+        }
+        .text-lg {
+          font-size: 20px;
+        }
+        .tech-logo {
+          width: 80px;
+          height: 80px;
+        }
+        .tech-logo img {
+          width: 64px;
+          height: 64px;
+        }
+        .filter-btn {
+          font-size: 16px;
+          padding: 12px 24px;
+        }
+        .tech-tag {
+          font-size: 12px;
+          padding: 6px 12px;
+        }
+        .contact-card {
+          padding: 24px;
+        }
+        .navbar {
+          padding: 12px 24px;
+        }
+        .project-card h3 {
+          font-size: 24px;
+          margin-bottom: 16px;
+        }
+        .project-card .description {
+          font-size: 16px;
+        }
+        details {
+          padding: 12px;
+          margin-bottom: 24px;
+          max-width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        summary {
+          font-size: 15px;
+          padding: 12px;
+        }
+        details p {
+          font-size: 14px;
+          padding: 12px;
+        }
+        .project-links a {
+          font-size: 14px;
+          padding: 6px 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="font-ibm-mono bg-terminal-bg">
+    <header class="navbar terminal-window w-full">
+      <div class="terminal-header">
+        <span class="text-sm text-secondary">openNavLinks()</span>
+        <div class="terminal-buttons">
+          <span class="red"></span>
+          <span class="yellow"></span>
+          <span class="green"></span>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links-container">
+          <li><a href="#home" class="nav-links">Home</a></li>
+          <li><a href="#projects" class="nav-links">Projects</a></li>
+          <li><a href="#stack" class="nav-links">Tech Stack</a></li>
+          <li><a href="#testimonials" class="nav-links">Testimonials</a></li>
+          <li><a href="#about" class="nav-links">About</a></li>
+          <li><a href="#contact" class="nav-links">Contact</a></li>
+        </ul>
+        <button
+          class="navbar-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section
+        id="home"
+        class="min-h-screen flex-center pt-20"
+        aria-labelledby="hero-heading"
+      >
+        <div class="terminal-window container-narrow">
+          <div class="terminal-header"></div>
+          <div class="p-6">
+            <p class="text-secondary text-sm">Hello, my name is</p>
+            <h1 class="text-2xl font-bold text-green-accent mt-8">
+              Samuel [Sam] Chutter
+            </h1>
+            <p class="text-secondary text-sm mt-8">
+              Swift / Front-End Web Developer
+            </p>
+            <p class="text-green-accent text-sm mt-16">
+              🎉 Proudly presenting my second iOS app,
+              <a
+                href="https://apps.apple.com/us/app/do-hue-recall/id6745530746"
+                target="_blank"
+                class="underline hover:text-green-dark"
+                rel="noopener noreferrer"
+                >Do Hue Recall?!</a
+              >, a color code memorization tool to speed up CSS development by
+              up to 50%. Explore it alongside my other
+              <a href="#projects" class="underline hover:text-green-dark"
+                >web and app projects</a
+              >
+              below!
+            </p>
+            <div
+              class="flex-wrap mt-16 justify-center overflow-x-auto hide-scrollbar"
+              id="screenshot-carousel"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="projects-heading">
+        <h2 class="section-title mb-48 text-center" id="projects-heading">
+          Personal Projects
+        </h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="ai">LLM-Prompted</button>
+        </div>
+        <div id="projects" class="grid-2 container" role="list"></div>
+      </section>
+      <section class="section" aria-labelledby="stack-heading">
+        <h2 class="section-title mb-48 text-center" id="stack-heading">
+          Tech Stack
+        </h2>
+        <div
+          id="stack"
+          class="flex-wrap justify-center container"
+          role="list"
+        ></div>
+      </section>
+      <section class="section" aria-labelledby="testimonials-heading">
+        <h2 class="section-title mb-48 text-center" id="testimonials">
+          Testimonials
+        </h2>
+        <article class="terminal-window p-6 mb-24 container">
+          <div class="flex mb-16">
+            <span class="text-green-accent" aria-label="5 stars">★★★★★</span>
+          </div>
+          <h3 class="text-lg font-bold mb-16">
+            "Quick turnaround time, extremely professional"
+          </h3>
+          <blockquote class="text-secondary text-sm mb-16">
+            "Sam did a great job with my website. The turnaround time was quick
+            and he was extremely professional. I'd recommend Sam and his work to
+            any small business owner."
+          </blockquote>
+          <p class="text-green-accent text-sm">
+            Megan E. - Nest Counseling, 2024,
+            <a
+              href="https://nest-counseling.com/"
+              target="_blank"
+              class="underline"
+              rel="noopener noreferrer"
+              >🔗 View Nest Counseling Live</a
+            >
+          </p>
+        </article>
+        <article class="terminal-window p-6 container">
+          <div class="flex mb-16">
+            <span class="text-green-accent" aria-label="5 stars">★★★★★</span>
+          </div>
+          <h3 class="text-lg font-bold mb-16">
+            "Timely and respectful communication"
+          </h3>
+          <blockquote class="text-secondary text-sm">
+            "ShadeMasters transformed my online presence with a stunning
+            website. The process was fast - took about 12 hours, and Sam's
+            professionalism was top-notch. I’d highly recommend Sam's services
+            to any small business looking to shine!"
+          </blockquote>
+          <p class="text-green-accent text-sm mt-16">
+            Marco R. - Shade-Masters, 2025,
+            <a
+              href="https://shademasters.samchutter.com/"
+              target="_blank"
+              class="underline"
+              rel="noopener noreferrer"
+              >🔗 View Shade Masters Live</a
+            >
+          </p>
+        </article>
+      </section>
+      <section class="section" aria-labelledby="about-heading">
+        <h2 class="section-title mb-48 text-center" id="about">About</h2>
+        <div id="description" class="terminal-window p-6 grid-2 container">
+          <div>
+            <h3 class="text-lg font-bold text-green-accent mb-8">
+              Education & Skills
+            </h3>
+            <p class="text-sm">
+              > I'm a senior in the
+              <strong>Digital Media Innovation</strong> program at
+              <strong>Texas State University</strong>, with a minor in
+              <strong>Computer Science</strong> focusing on C++ (Relevant
+              Courses: Full-Stack Web Development, Object-Oriented Programming,
+              Data Structures, Advanced Algorithms, Computer Ethics, Discrete
+              Math, Media Design).<br />
+              > Specializing in front-end development, I'm expanding into
+              full-stack web and app development, with experience
+              in React, React Native, Expo, and SwiftUI.<br />
+              > Achievements: Dean's List (2023-2024), led design process of TXST
+              Student and Faculty Collaboration Platform, successfully published both AuraLog and Do
+              Hue Recall?! on App Store.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-green-accent mb-8">
+              My Background
+            </h3>
+            <p class="text-sm">
+              > Originally from Spring, Texas, my curiosity drives my passion
+              for tech and creativity. I'm a guitarist in a Texas Rock Band,
+              <a
+                href="https://open.spotify.com/artist/19L7aNim2ENnnsE8ZeVKWd"
+                target="_blank"
+                class="text-green-accent hover:underline"
+                rel="noopener noreferrer"
+                >(listen here 🎸)</a
+              >, and enjoy
+              <a
+                href="http://www.culinarycorner.samchutter.com"
+                target="_blank"
+                class="text-green-accent hover:underline"
+                rel="noopener noreferrer"
+                >cooking adventurous recipes</a
+              >, hiking, gardening, and fitness.<br />
+              > These passions fuel my creative approach to UI/UX design and
+              problem-solving. As I near graduation, I'm eager to apply my
+              skills to impactful projects.
+            </p>
+            <a
+              href="https://www.resume.samchutter.com"
+              target="_blank"
+              class="text-green-accent text-sm hover:underline mt-16 inline-block"
+              rel="noopener noreferrer"
+              >Download My Resume</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="interests-heading">
+        <h2 class="section-title mb-48 text-center" id="interests-heading">
+          Interests
+        </h2>
+        <div
+          id="interests-container"
+          class="terminal-window p-6 flex-wrap container"
+          role="list"
+        ></div>
+      </section>
+      <section
+        id="contact-section"
+        class="section"
+        aria-labelledby="contact-heading"
+      >
+        <h2 class="section-title mb-48 text-center" id="contact">Contact</h2>
+        <p class="intro-text">
+          Let's connect! Reach out to discuss opportunities or just say hi.
+        </p>
+        <div id="contact-container" class="grid-4 container" role="list">
+          <article class="contact-card terminal-window p-4" role="listitem">
+            <h3 class="text-sm font-bold mb-8">Email Me</h3>
+            <a
+              href="/cdn-cgi/l/email-protection#4a392b27293d2f282e2f3c0a2d272b232664292527"
+              class="text-green-accent text-sm hover:underline"
+              >Get in touch for opportunities or questions</a
+            >
+          </article>
+          <article class="contact-card terminal-window p-4" role="listitem">
+            <h3 class="text-sm font-bold mb-8">LinkedIn</h3>
+            <a
+              href="https://www.linkedin.com/in/samuel-chutter/"
+              target="_blank"
+              class="text-green-accent text-sm hover:underline"
+              rel="noopener noreferrer"
+              >Connect with me professionally</a
+            >
+          </article>
+          <article class="contact-card terminal-window p-4" role="listitem">
+            <h3 class="text-sm font-bold mb-8">GitHub</h3>
+            <a
+              href="https://github.com/samchutter02"
+              target="_blank"
+              class="text-green-accent text-sm hover:underline"
+              rel="noopener noreferrer"
+              >Check out my repositories</a
+            >
+          </article>
+          <article class="contact-card terminal-window p-4" role="listitem">
+            <h3 class="text-sm font-bold mb-8">Resume</h3>
+            <a
+              href="https://www.resume.samchutter.com"
+              target="_blank"
+              class="text-green-accent text-sm hover:underline"
+              rel="noopener noreferrer"
+              >Download my resume</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="container section text-center text-secondary text-sm">
+      <p>2025 by: Samuel Chutter.</p>
+      <nav aria-label="Footer navigation">
+        <a href="#home" class="text-green-accent hover:underline mx-8">Home</a>
+        <a href="#projects" class="text-green-accent hover:underline mx-8"
+          >Projects</a
+        >
+        <a href="#contact" class="text-green-accent hover:underline mx-8"
+          >Contact</a
+        >
+      </nav>
+    </footer>
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script>
+      // Navbar Toggle
+      const navbarToggle = document.querySelector(".navbar-toggle");
+      const navLinksContainer = document.querySelector(".nav-links-container");
+
+      function toggleMenu() {
+        navbarToggle.classList.toggle("active");
+        navLinksContainer.classList.toggle("active");
+        const isExpanded = navLinksContainer.classList.contains("active");
+        navbarToggle.setAttribute("aria-expanded", isExpanded);
+      }
+
+      navbarToggle.addEventListener("click", toggleMenu);
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll(".nav-links").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (navLinksContainer.classList.contains("active")) {
+            toggleMenu();
+          }
+        });
+      });
+
+      // Smooth Scrolling
+      document.querySelectorAll(".nav-links").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetSection = document.getElementById(targetId);
+          if (!targetSection) {
+            console.warn(`Target section with ID "${targetId}" not found.`);
+            return;
+          }
+          const navbar = document.querySelector(".navbar");
+          const navbarHeight = navbar
+            ? navbar.getBoundingClientRect().height
+            : 0;
+          const sectionTop =
+            targetSection.getBoundingClientRect().top + window.scrollY;
+          const scrollPosition = sectionTop - navbarHeight - 20;
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Accessibility
+      document
+        .querySelectorAll(".nav-links, .navbar-toggle, a[href], button")
+        .forEach((el) => {
+          if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "0");
+        });
+
+      // Carousel Touch Handling
+      const carousel = document.getElementById("screenshot-carousel");
+      if (carousel) {
+        let startX,
+          startY,
+          isSwiping = false;
+        carousel.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+          isSwiping = true;
+        });
+        carousel.addEventListener(
+          "touchmove",
+          (e) => {
+            if (!isSwiping) return;
+            const currentX = e.touches[0].clientX;
+            const currentY = e.touches[0].clientY;
+            const diffX = Math.abs(currentX - startX);
+            const diffY = Math.abs(currentY - startY);
+            if (diffX > diffY) {
+              e.preventDefault();
+            }
+          },
+          { passive: false }
+        );
+        carousel.addEventListener("touchend", () => {
+          isSwiping = false;
+        });
+      }
+
+      // Projects Data
+      const projects = [
+        {
+          image: "img/final-auralog.jpg",
+          title: "AuraLog",
+          description:
+            "<strong>Problem:</strong> Migraineurs with visual aura lack dedicated tracking tools.<br><strong>Solution:</strong> AuraLog, my first iOS app, offers a seamless migraine tracker built with SwiftUI in Xcode. Features include secure local storage, no accounts, and a one-time $1.99 purchase.<br><strong>Outcome:</strong> Published on the App Store, addressing an underserved community's needs.",
+          tech: ["Swift", "SwiftUI", "localStorage"],
+          view: "https://apps.apple.com/us/app/aura-log/id6744613084",
+          source: "",
+          category: "mobile",
+          challenges:
+            "<strong>Challenge:</strong> Ensuring secure and efficient local storage for sensitive health data without requiring user accounts.<br><strong>Solution:</strong> Implemented Core Data to securely store migraine logs locally, optimizing performance by minimizing database queries and ensuring compliance with App Store privacy guidelines.",
+        },
+        {
+          image: "img/marketing.jpg",
+          title: "AuraLog - Marketing",
+          description:
+            "<strong>Problem:</strong> Neurologists needed awareness of AuraLog's value.<br><strong>Solution:</strong> A targeted HTML/CSS platform at marketing.samchutter.com promotes AuraLog with SEO-optimized medical keywords and clean design.<br><strong>Outcome:</strong> Increases engagement from healthcare professionals for migraine studies.",
+          tech: ["HTML", "CSS", "JavaScript"],
+          view: "https://marketing.samchutter.com/",
+          source: "",
+          category: "web",
+          challenges:
+            "<strong>Challenge:</strong> Achieving high search engine visibility for my niche medical app.<br><strong>Solution:</strong> Conducted keyword research to identify high-impact medical terms, integrated them into meta tags and content, and used semantic HTML to improve SEO, resulting in increased traffic from healthcare professionals.",
+        },
+        {
+          image: "img/txst.jpg",
+          title: "TXST Faculty/Student Collaboration Platform",
+          description:
+            "<strong>Problem:</strong> Students struggled to connect with faculty for research.<br><strong>Solution:</strong> A React.js platform for Texas State University enables collaboration, with features like expertise-based matching and project management.<br><strong>Outcome:</strong> Enhances student profiles and career development, deployed on Vercel.",
+          tech: ["Tailwind CSS", "React.js", "Vercel", "Vite", "MongoDB"],
+          view: "https://collab-platform-ten.vercel.app/",
+          source: "",
+          category: "web",
+        },
+        {
+          image: "img/dohuerecall.jpg",
+          title: "Due Hue Recall?!",
+          description:
+            "<strong>Problem:</strong> Many developers struggle to instantly recognize color codes like HEX and RGB, which can slow down their work and disrupt their coding flow.<br><strong>Solution:</strong> Do Hue Recall is an iOS app that provides quiz-based training to help developers quickly learn to identify and recall color codes, featuring flexible learning modes and a color information hub.<br><strong>Outcome:</strong> The app likely empowers developers to work more efficiently by enhancing their color code skills, reducing the need for color pickers, and boosting productivity.",
+          tech: ["Swift", "SwiftUI"],
+          view: "https://apps.apple.com/us/app/do-hue-recall/id6745530746",
+          source: "",
+          category: "mobile",
+          challenges:
+            "<strong>Challenge:</strong> Creating an engaging and intuitive quiz interface that adapts to different learning styles.<br><strong>Solution:</strong> Used SwiftUI to build a dynamic UI with multiple quiz modes, incorporating custom feedback to maintain user engagement, and tested with developers to refine usability.",
+        },
+        {
+          image: "img/wtf.jpg",
+          title: "What the Function?!",
+          description:
+            "<strong>Problem:</strong> Granular HTML/CSS lessons exist - but not to the extent that 'What the Function?!' takes it.<br><strong>Solution:</strong> Create a HTML/CSS learning platform that goes super granular with learning concepts and includes real-world context to help.<br><strong>Outcome:</strong>Anyone with internet access can learn HTML/CSS and make a portfolio site - all for free and without an account. <em>(currently under construction...)</em>",
+          tech: ["HTML", "CSS", "x.ai/SuperGrok"],
+          view: "https://whatthefunction.samchutter.com",
+          source: "",
+          category: "web",
+          challenges:
+            "<strong>Challenge:</strong> Structuring highly granular content without overwhelming learners.<br><strong>Solution:</strong> Solution in progress...",
+        },
+        {
+          image: "img/robo-mover.jpg",
+          title: "C++ Robo-Mover",
+          description:
+            "<strong>Problem:</strong> Need for a simulation to demonstrate OOP in C++.<br><strong>Solution:</strong> A console app simulating robots on a 2D grid, allowing users to create, name, and move robots with dynamic speed.<br><strong>Outcome:</strong> Showcases object-oriented programming and dynamic memory management.",
+          tech: ["C++"],
+          view: "",
+          source: "https://github.com/samchutter02/Robot-Mover",
+          category: "other",
+        },
+        {
+          image: "img/pedalpath.jpg",
+          title: "PedalPath",
+          description:
+            "<strong>Problem:</strong> Musicians needed a tool to design pedalboards.<br><strong>Solution:</strong> An AI-generated web app with drag-and-drop functionality, signal chain visualization, and power calculations, built via AI prompting.<br><strong>Outcome:</strong> Innovative tool for guitarists, optimized for desktop.",
+          tech: ["AI Prompting", "x.ai/SuperGrok", "Sonnet 3.5"],
+          view: "https://www.pedalpath.samchutter.com",
+          source: "",
+          category: "ai",
+        },
+        {
+          image: "img/paws.png",
+          title: "Paws on Tour",
+          description:
+            "<strong>Problem:</strong> TXST students needed better campus navigation.<br><strong>Solution:</strong> A Vue.js app with interactive mapping and dynamic filtering for landmarks, optimized for tablets (Swift version in progress).<br><strong>Outcome:</strong> Enhances campus exploration experience.",
+          tech: ["HTML5", "CSS", "Vue.js"],
+          source: "",
+          category: "web",
+        },
+        {
+          image: "img/culcorner.png",
+          title: "Culinary Corner",
+          description:
+            "<strong>Problem:</strong> Food enthusiasts wanted a platform for recipes and photography.<br><strong>Solution:</strong> A web app combining food/cocktail photography and ingredient exploration, built with vanilla JavaScript.<br><strong>Outcome:</strong> Promotes culinary creativity and learning.",
+          tech: ["HTML5", "CSS", "JavaScript"],
+          view: "http://www.culinarycorner.samchutter.com",
+          source: "",
+          category: "web",
+        },
+      ];
+
+      // Populate Projects with Error Handling
+      const projectsContainer = document.getElementById("projects");
+      if (projectsContainer) {
+        try {
+          projects.forEach((project) => {
+            const projectCard = document.createElement("article");
+            projectCard.className = "project-card terminal-window";
+            projectCard.setAttribute("role", "listitem");
+            projectCard.setAttribute("data-category", project.category);
+            const isPawsOnTour = project.title === "Paws on Tour";
+            projectCard.innerHTML = `
+              <img src="${project.image}" alt="${
+              project.title
+            } project screenshot" class="screenshot-img">
+              <div class="p-6">
+                <h3>${project.title}</h3>
+                <p class="description">${project.description}</p>
+                <details>
+                  <summary>Challenges and Solutions</summary>
+                  <p>${project.challenges}</p>
+                </details>
+                <div class="flex-wrap mb-12">
+                  ${project.tech
+                    .map((tech) => `<span class="tech-tag">${tech}</span>`)
+                    .join("")}
+                </div>
+                <div class="project-links flex gap-4">
+                  ${
+                    isPawsOnTour
+                      ? ""
+                      : project.view
+                      ? `<a href="${project.view}" target="_blank" class="text-green-accent text-sm hover:underline" rel="noopener noreferrer">> Live Demo</a>`
+                      : ""
+                  }
+                  ${
+                    project.source
+                      ? `<a href="${project.source}" target="_blank" class="text-green-accent text-sm hover:underline" rel="noopener noreferrer">> Source Code</a>`
+                      : ""
+                  }
+                </div>
+              </div>
+            `;
+            projectsContainer.appendChild(projectCard);
+          });
+        } catch (error) {
+          console.error("Error generating project cards:", error);
+          projectsContainer.innerHTML =
+            "<p class='text-red-500'>Failed to load projects. Please try refreshing the page.</p>";
+        }
+      }
+
+      // Project Filtering
+      document.querySelectorAll(".filter-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+          const filter = button.getAttribute("data-filter");
+          document.querySelectorAll(".project-card").forEach((card) => {
+            if (
+              filter === "all" ||
+              card.getAttribute("data-category") === filter
+            ) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Tech Stack Data
+      const toolkitLogos = [
+        { src: "swift.png", tooltip: "Swift: iOS app development (1 year)" },
+        {
+          src: "tailwind.png",
+          tooltip: "Tailwind CSS: Utility-first styling (3 years)",
+        },
+        {
+          src: "javascript.png",
+          tooltip: "JavaScript: Dynamic web functionality (3 years)",
+        },
+        {
+          src: "react.png",
+          tooltip: "React.js: 2 years",
+        },
+        {
+          src: "react.png",
+          tooltip: "React Native: 1 year",
+        },
+        { src: "vue.png", tooltip: "Vue.js: Progressive web apps (2 years)" },
+        {
+          src: "cpp.png",
+          tooltip: "C++: Object-oriented programming (3 years)",
+        },
+        {
+          src: "assembly.png",
+          tooltip: "Assembly: Low-level programming (2 years)",
+        },
+        { src: "git.png", tooltip: "Git: Version control (3 years)" },
+      ];
+
+      // Populate Tech Stack
+      const toolkitContainer = document.getElementById("stack");
+      if (toolkitContainer) {
+        try {
+          toolkitLogos.forEach((logo) => {
+            const logoDiv = document.createElement("div");
+            logoDiv.setAttribute("role", "listitem");
+            logoDiv.className = "tech-logo terminal-window p-4";
+            logoDiv.setAttribute("data-tooltip", logo.tooltip);
+            logoDiv.innerHTML = `<img src="logos/${logo.src}" alt="${
+              logo.src.split(".")[0]
+            } logo">`;
+            toolkitContainer.appendChild(logoDiv);
+          });
+        } catch (error) {
+          console.error("Error generating tech stack:", error);
+        }
+      }
+
+      // Interests Data
+      const interests = [
+        "UI/UX Design",
+        "Swift Development",
+        "React Native Development",
+        "Visual Design",
+        "Drawing",
+        "Fitness",
+        "Disc Golf",
+        "Skydiving",
+        "Hiking",
+        "Botany",
+        "World Travel",
+        "Guitar, Drums, Piano",
+        "Digital Music Production",
+        "Cooking",
+        "Bartending",
+      ];
+
+      // Populate Interests
+      const interestsContainer = document.getElementById("interests-container");
+      if (interestsContainer) {
+        try {
+          interests.forEach((interest) => {
+            const span = document.createElement("span");
+            span.setAttribute("role", "listitem");
+            span.className = "tech-tag";
+            span.textContent = interest;
+            interestsContainer.appendChild(span);
+          });
+        } catch (error) {
+          console.error("Error generating interests:", error);
+        }
+      }
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'93c6924ccec7bd2b',t:'MTc0NjY4MjI5My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
